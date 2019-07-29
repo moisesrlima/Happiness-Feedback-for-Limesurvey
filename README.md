@@ -114,7 +114,7 @@ Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.m
 
 ## Agradecimentos
 
-* Agradeço ao apoio da minha equie de UX @chrystiano e @Diego que me encorajáram a disponibilizar esse material na comunidade e também ao nosso amigo desenvolvedor cabeçudo @lucas que tirou nossos impedimentos tecnológicos. 
+* Agradeço o apoio dos meus amigos https://github.com/chrystiano e @Diego que me encorajaram a disponibilizar esse material na comunidade e também ao nosso amigo desenvolvedor cabeçudo @lucas que tirou nossos impedimentos tecnológicos. 
 * O nome foi inspirado na prática Happiness  door,"Obtendo feedback atraves da porta da felicidade" na abordagem do "Management 3.0".
 
 
