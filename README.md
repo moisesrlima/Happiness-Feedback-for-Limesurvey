@@ -1,18 +1,23 @@
-# Título do projeto
+# Happiness Feedback for Limesurvey
 
-Happiness Feedback for Limesurvey
 
-## Começando
 
-Meu objetivo quando criei essa ferramenta, foi de criar algo simples que após instalado, pudesse ajudar os desenvolvedores a encontrar problemas de usabilidade e mais do que isso, descobrir o que fazem os usuários felizes. Sou desenvolvedor frontend e analista UX, Acredito de devemos parar de de adivinhar os que as pessoas estão sentido a respeito de uma funcionalidade e deixa-las nos contar por conta própria empoderando tanto os times de desenvolvimento quanto os usuários. 
+## Objetivo
+
+Meu objetivo quando criei essa ferramenta, foi de criar algo simples que após instalado, pudesse ajudar os desenvolvedores a encontrar problemas de usabilidade e mais do que isso, descobrir o que fazem os usuários felizes. Sou desenvolvedor frontend e analista UX, Acredito que devemos parar de de adivinhar o que as pessoas estão sentido a respeito de uma funcionalidade e deixa-las nos contar por conta própria empoderando tanto os times de desenvolvimento quanto nossos usuários.
+
+![Imagem mostrando upload do tema](readme-images/Capturar8.PNG)
 
 Trata-se de um widget de captura emocional, com ele o usuário consegue deixar uma nota de 1 a 5 a mostrando seu nível de felicidade a respeito da experiência com uma página específica/funcionalidade específica. Possibilitando assim ao time de desenvolvimento do site/sistema trabalhar no que realmente importa para os usuários.
+
+Ainda não tenho uma Demo pública rodando, estamos utilizando com sucesso na nossa intranet.
 
 Existem muitas coisas queremos fazer então sinta-se à vontade para contribuir com a nossa lista de melhorias. Pedimos que utilize de forma gratuita e compartilhe suas impressões com outros designers.
 
 Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Veja a implantação de notas sobre como implantar o projeto em um sistema ativo. 
 
 Para facilitar o entendimento, estamos orientando um passo a passo bem rigido, porém após aprender não fique limitado apenas as opções mostradas abaixo, muitas estapas são flexíveis para o funcionamento principal, use a criatividade.
+
 
 ### Pré-requisitos
 
@@ -30,16 +35,16 @@ Uma série passo a passo de exemplos que informam como obter um env de desenvolv
 
 Passo 1 - Instale o tema
 
-```
+
 No painel de controle do lime navegue em "Configuração / Temas / Importar" selecione o arquivo "feedback-lime-theme.zip" e clique em importar, conforme manda a imagem.
 
-```
+
 ![Imagem mostrando upload do tema](readme-images/Capturar1.PNG)
 
 Passo 2 - Crie o Questionário
-```
-Usaremos o questionário do Limesurvey para capturar as reações dos usuários, então para isso crie 2 grupos de de perguntas e 3 perguntas na seguinte ordem.
 
+Usaremos o questionário do Limesurvey para capturar as reações dos usuários, então para isso crie 2 grupos de de perguntas e 3 perguntas na seguinte ordem.
+```
 Grupo 1 -  Emoticons 
     Pergunta 1 - Como você classificaria sua experiência? 
         Opções Gerais
@@ -63,28 +68,32 @@ Grupo 2 -  Comentário
 
 ```
 ![Imagem mostrando upload do tema](readme-images/Capturar2.PNG)
-E repita
 
-```
+
 Configurações do Questionário 
 
 Em configurações gerais do questionário, selecione o modelo instalado no passo 1 conforme a imagem a seguir.
 
-```
+
 ![Imagem mostrando upload do tema](readme-images/Capturar3.PNG)
 
 
 
 Configurações de apresentação
-```
+
 Para simplificar a aparência, também recomendo ocultar algumas informações conforme a imagem abaixo.
-```
+
 ![Imagem mostrando upload do tema](readme-images/Capturar4.PNG)
+
+Configurações de propriedade: Ative o questinário ele pode ser anônimo para esse exemplo.
 
 Passo 3 - Instale o Widget
 
 Vá a seu site e instale o seguinte código disponível no arquivo [index.html](source/index.html), para que você consiga fazer a comunicação do iframe com a pagina em que o widget é carregado, autorize nos locais indicados colocando o domínio em que encontra-se instalado o Limesurvey no seu servidor. Poesteriormente também será mostrado como autorizar as páginas em que o iframe está autorizado a aparecer.
 
+
+sendURL
+Responsável pela função que captura a url da página atual.
 
 ```javascript
         function sendURL() {
@@ -102,16 +111,59 @@ Vá a seu site e instale o seguinte código disponível no arquivo [index.html](
         }
 ```
 
-E repita
+Botão Feedback
+![Imagem mostrando upload do tema](readme-images/Capturar5.PNG)
 
+```html
+<div id="chat-square" class="btn btn-raised">
+    <div id="chat-overlay"></div>
+    Feedback
+</div>
 ```
-até terminar
+Modal com iframe com os emoticons funcionando com o limesurvey
 
+```html
+<!-- Happiness Feedback - Início - Parte 2-->
+<div class="chat-box">
+    <div class="chat-box-header">
+        <span class="chat-box-toggle"><i class="material-icons">×</i></span>
+    </div>
+    <div class="chat-box-body">
+        <div class="chat-box-overlay">
+            <!-- Incluir a url completa do questionário do Limesurvey a ser incluído no widget do iframe -->
+            <iframe id="feedback" src="http://seu-lime-survey.com/index.php/id-do-formulario"
+                style="border:0px #ffffff none;" name="lime" scrolling="overflow-y" frameborder="1"
+                marginheight="0px" marginwidth="0px" height="200px" width="320px" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<!-- Happiness Feedback - fim -->
 ```
 
+![Imagem mostrando upload do tema](readme-images/Capturar6.PNG)
 
-Termine com um exemplo de obter alguns dados do sistema ou usá-los para uma pequena demonstração
 
+Autorização final:
+
+Também é necessário votar no tema e informar os domínios que estão autorizadoas a mostrar o limesurvey.
+
+Para isso, volte ao tema criado no lime survey em edite o tema, informe o domínio da pagina, clique em "Salvar alterações".
+
+```javascript
+$(function () {
+    function receiver(event) {
+        //Autorização do domínio
+     if (event.origin !== "http://127.0.0.1:5500"){
+         alert("Sem permissão")
+     }else{
+         $("#answer265758X391X2281").val(event.data)
+     }
+    }
+    
+    window.addEventListener('message', receiver, false);
+})
+```
+![Imagem mostrando upload do tema](readme-images/Capturar7.PNG)
 ## Rodando os testes
 
 Explicar como executar os testes automatizados para este sistema
