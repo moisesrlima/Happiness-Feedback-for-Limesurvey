@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Limesurvey - Happyness Feedback Widget</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous">
+    </script>
+    
+    <!-- Happiness Feedback - Início - Parte 1-->
+    <link rel="stylesheet" type="text/css" href="feedback.css">
+    <script src="feedbaks.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        function sendURL() {
+            //Seleciona a url atual para salvar no campo hidden
+            var myUrl = window.location.href;
+            remoteframe = document.getElementById('feedback')
+            //Verifica se a mensagem está em branco
+            if (myUrl !== "") {
+            //autoriza o domínio do questionário a se conectar via iframe de forma segura
+                remoteframe.contentWindow.postMessage(myUrl, 'http://seu-lime-survey.com');
+            }
+            else {
+                alert("URL Vazia");
+            }
+        }
+    </script>
+    <!-- Happiness Feedback - Fim -->
+
+</head>
+
+<body>
+    <div id="center-text">
+        <h2>Central UX</h2>
+        <p>Coletando feedbacks reais dos usuários. </p>
+    </div>
+    <div id="body">
+        <div id="chat-square" class="btn btn-raised">
+            <div id="chat-overlay"></div>
+            Feedback
+        </div>
+        <!-- Happiness Feedback - Início - Parte 2-->
+        <div class="chat-box">
+            <div class="chat-box-header">
+                <span class="chat-box-toggle"><i class="material-icons">×</i></span>
+            </div>
+            <div class="chat-box-body">
+                <div class="chat-box-overlay">
+                    <!-- Incluir a url completa do questionário do Limesurvey a ser incluído no widget do iframe -->
+                    <iframe id="feedback" src="http://seu-lime-survey.com/index.php/id-do-formulario"
+                        style="border:0px #ffffff none;" name="lime" scrolling="overflow-y" frameborder="1"
+                        marginheight="0px" marginwidth="0px" height="200px" width="320px" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Happiness Feedback - fim -->
+    </div>
+</body>
+
+</html>
