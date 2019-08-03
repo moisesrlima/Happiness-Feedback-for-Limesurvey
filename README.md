@@ -8,7 +8,7 @@ Meu objetivo quando criei essa ferramenta, foi de criar algo simples que após i
 
 ![Imagem mostrando upload do tema](readme-images/Capturar8.PNG)
 
-Trata-se de um widget de captura emocional, com ele o usuário consegue deixar uma nota de 1 a 5 a mostrando seu nível de felicidade a respeito da experiência com uma página específica/funcionalidade específica. Possibilitando assim ao time de desenvolvimento do site/sistema trabalhar no que realmente importa para os usuários.
+Trata-se de um widget de captura emocional, com ele o usuário consegue deixar uma nota de 1 a 5, mostrando o seu nível de felicidade a respeito da experiência com uma página específica/funcionalidade específica. Possibilitando assim ao time de desenvolvimento do site/sistema trabalhar no que realmente importa para os usuários.
 
 Ainda não tenho uma Demo pública rodando, estamos utilizando com sucesso na nossa intranet.
 
@@ -31,7 +31,7 @@ O que você precisa para instalar o software e instalá-lo
 
 Passo 0 - Baixe a última versão do projeto.
 
-Uma série passo a passo de exemplos que informam como obter um env de desenvolvimento em execução
+Uma série passo a passo de exemplos que informam como obter um começo de desenvolvimento em execução
 
 Passo 1 - Instale o tema
 
