@@ -87,9 +87,22 @@ Para simplificar a aparência, também recomendo ocultar algumas informações c
 
 Configurações de propriedade: Ative o questinário ele pode ser anônimo para esse exemplo.
 
+
 Passo 3 - Instale o Widget
 
-Vá a seu site e instale o seguinte código disponível no arquivo [index.html](index.html), para que você consiga fazer a comunicação do iframe com a pagina em que o widget é carregado, autorize nos locais indicados colocando o domínio em que encontra-se instalado o Limesurvey no seu servidor. Poesteriormente também será mostrado como autorizar as páginas em que o iframe está autorizado a aparecer.
+Vá a seu site e instale os trechos  código
+```
+<!-- Happiness Feedback - Início - Parte 1-->...
+```
+e
+```
+<!-- Happiness Feedback - Início - Parte 2-->...
+```
+disponível no arquivo [index.html](index.html). 
+
+Para que você consiga fazer a comunicação do iframe com a pagina em que o widget é carregado, autorize nos locais indicados colocando o domínio em que encontra-se instalado o Limesurvey no seu servidor. Poesteriormente também será mostrado como autorizar as páginas em que o iframe está autorizado a aparecer.
+
+
 
 
 sendURL
