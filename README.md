@@ -90,7 +90,7 @@ Configurações de propriedade: Ative o questinário ele pode ser anônimo para 
 
 Passo 3 - Instale o Widget
 
-Vá a seu site e instale os trechos  código
+Vá a seu site/aplicação e instale os trechos de código
 ```
 <!-- Happiness Feedback - Início - Parte 1-->...
 ```
