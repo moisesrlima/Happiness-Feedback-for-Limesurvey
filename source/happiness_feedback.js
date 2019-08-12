@@ -14,12 +14,12 @@ jQuery(function () {
 
     jQuery("#chat-square").click(function () {
         jQuery("#chat-square").click(sendURL())
-        jQuery("#chat-square").toggle('scale');
+        jQuery("#chat-square").toggleClass('close');
         jQuery(".chat-box").toggleClass('open');
     })
 
     jQuery(".chat-box-toggle").click(function () {
-        jQuery("#chat-square").toggle('scale');
+        jQuery("#chat-square").toggleClass('close');
         jQuery(".chat-box").toggleClass('open');
     })
 

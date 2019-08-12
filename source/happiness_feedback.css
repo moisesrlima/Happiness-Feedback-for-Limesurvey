@@ -36,6 +36,7 @@ website: https://www.behance.net/moisesrlima
   line-height: normal;
   text-transform: none;
   font-family: Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
 }
 
 /*Reset CSS - Fim*/
@@ -267,8 +268,10 @@ website: https://www.behance.net/moisesrlima
   position: absolute;
   z-index: -1;
 }
-
-#happiness-feedback #chat-square {
+#happiness-feedback #chat-square.close{
+  display: none;
+}
+#happiness-feedback #chat-square{
   position: fixed;
   bottom: 50%;
   right: -3px;
@@ -295,6 +298,7 @@ website: https://www.behance.net/moisesrlima
   color: #5a5eb9;
   text-align: center;
 }
+
 
 @keyframes slide-down {
   0% {
