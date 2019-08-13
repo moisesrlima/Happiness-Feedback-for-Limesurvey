@@ -42,7 +42,7 @@ website: https://www.behance.net/moisesrlima
 /*Reset CSS - Fim*/
 
 
-
+/*remover*/
 #center-text {
   display: flex;
   flex: 1;
@@ -94,22 +94,26 @@ website: https://www.behance.net/moisesrlima
   background: #efefef;
   position: fixed;
   right: 10px;
-  bottom: 38%;
+  bottom: 50%;
   width: 300px;
   max-width: 86vw;
+  margin-bottom: -117px;
   max-height: 100vh;
   border-radius: 5px;
   box-shadow: 0 5px 35px 9px #ccc;
   transition: all 0.5s ease;
   min-width: 300px;
   z-index: 9999;
+  animation: slide-right 0.3s ease-out;
+  -webkit-animation: slide-right 0.3s ease-out;
+  -moz-animation: slide-right 0.3s ease-out;
 }
 
 #happiness-feedback .chat-box.open {
   display: block;
-  animation: slide-down 0.3s ease-out;
-  -webkit-animation: slide-down 0.3s ease-out;
-  -moz-animation: slide-down 0.3s ease-out;
+  animation: slide-left 0.3s ease-out;
+  -webkit-animation: slide-left 0.3s ease-out;
+  -moz-animation: slide-left 0.3s ease-out;
 }
 
 #happiness-feedback .chat-box-toggle {
@@ -271,12 +275,12 @@ website: https://www.behance.net/moisesrlima
 #happiness-feedback #chat-square.close{
   display: none;
 }
-#happiness-feedback #chat-square{
+#happiness-feedback #chat-square {
   position: fixed;
   bottom: 50%;
   right: -3px;
   background: #023E87;
-  width: 16px;
+  width: 40px;
   border-radius: 0 6px 6px 0;
   color: #fff;
   padding: 14px;
@@ -290,6 +294,9 @@ website: https://www.behance.net/moisesrlima
   z-index: 999;
   font-size: 17px;
   margin-bottom: -44px;
+  box-sizing: border-box;
+  padding: 15px 0px 15px 0;
+  line-height: 40px;
 }
 
 #happiness-feedback .bg-primary {
@@ -300,7 +307,7 @@ website: https://www.behance.net/moisesrlima
 }
 
 
-@keyframes slide-down {
+@keyframes slide-left {
   0% {
     opacity: 0;
     transform: translateX(100%);
@@ -309,17 +316,5 @@ website: https://www.behance.net/moisesrlima
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  #happiness-feedback .chat-logs {
-    height: 40vh;
-  }
-}
-
-@media screen and (max-width:760px) {
-  #happiness-feedback .chat-box {
-    bottom: 45px;
   }
 }
