@@ -41,18 +41,6 @@ website: https://www.behance.net/moisesrlima
 
 /*Reset CSS - Fim*/
 
-
-/*remover*/
-#center-text {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  font-family: sans-serif;
-}
-
 #happiness-feedback #chat-circle {
   position: fixed;
   bottom: 50px;
