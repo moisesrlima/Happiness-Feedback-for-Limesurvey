@@ -286,6 +286,17 @@ website: https://www.behance.net/moisesrlima
   box-sizing: border-box;
   padding: 15px 0px 15px 0;
   line-height: 40px;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  word-wrap: normal !important;
+  white-space: nowrap !important;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  cursor: pointer;
+  -webkit-writing-mode: vertical-lr;
+  -moz-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-rl;
+  -o-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
 }
 
 #happiness-feedback .bg-primary {
