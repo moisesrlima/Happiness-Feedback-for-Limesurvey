@@ -77,35 +77,26 @@ website: https://www.behance.net/moisesrlima
   width: 100%;
 }
 
-#happiness-feedback #chat-square {
+#happiness-feedback .chat-box {
+  display: none;
+  background: #efefef;
   position: fixed;
+  right: 10px;
   bottom: 50%;
-  right: -3px;
-  background: #ffffff;
-  width: 40px;
-  border-radius: 0 6px 6px 0;
-  color: #777;
-  cursor: pointer;
-  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.29), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  direction: inherit;
-  transform: rotate(180deg);
-  writing-mode: vertical-lr;
-  font-family: sans-serif;
-  font-weight: normal;
-  z-index: 999;
-  font-size: 17px;
-  margin-bottom: -44px;
-  box-sizing: border-box;
-  padding: 15px 0px 15px 0;
-  line-height: 40px;
+  width: 300px;
+  max-width: 86vw;
+  margin-bottom: -117px;
+  max-height: 100vh;
+  border-radius: 5px;
+  box-shadow: 0 5px 35px 9px #ccc;
+  transition: all 0.5s ease;
+  min-width: 300px;
+  z-index: 9999;
+  animation: slide-right 0.3s ease-out;
+  -webkit-animation: slide-right 0.3s ease-out;
+  -moz-animation: slide-right 0.3s ease-out;
 }
-#happiness-feedback #chat-square i {
-  width: 17px;
-  height: 18px;
-  display: inline-block;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAYAAAC9+TVUAAAACXBIW…8+O6dTQ/cynd5gEb4yUva5uQo4PxQnwdpwLVZA/u8TeoT8AUNIqfSlh3DxAAAAAElFTkSuQmCC);
-  transform: rotate(180deg);
-}
+
 #happiness-feedback .chat-box.open {
   display: block;
   animation: slide-left 0.3s ease-out;
@@ -276,10 +267,10 @@ website: https://www.behance.net/moisesrlima
   position: fixed;
   bottom: 50%;
   right: -3px;
-  background: #023E87;
+  background: #ffffff;
   width: 40px;
   border-radius: 0 6px 6px 0;
-  color: #fff;
+  color: #6f6f6f;
   padding: 14px;
   cursor: pointer;
   box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.29), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -315,3 +306,12 @@ website: https://www.behance.net/moisesrlima
     transform: translateX(0);
   }
 }
+
+#happiness-feedback #chat-square i {
+  width: 17px;
+  height: 18px;
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAYAAAC9+TVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFOSURBVHgBtVTtcYMwDBU+/y8jkAlKN2g3yAAcphM0G8QbJExQYAHaCZoR2CAegS4AfbpTeoQY4j/RncAW0vPTB46KoojHcdxDCyKKaUWiKDpB36uqclO7RvCBAfCxx/60BgK/V7xa6MsVeJ7nZwBQXdcbuiPGmBZAW6XUZspGQROomzojxWSBya/PruaGLMu2wzCcwdBSoOgbg9YOJ3ZIsZNUe+gb6PfBIHDuSAqHGnxwMaE7bO0SiKIV4XbK0sjb8QOgn8Eg0gFOI+F90zSWZ4XZgeUhCES6FCPQXfZYl8Jmh5qZuyDoUisB37K3F5vIEcCp9p2OoB84lziVfwPulJ25lZImAz9rD4EUIEw7XppiTOxxPrFXgo9fPNZcRAoUBuHhSmdAzucMdk8+O6dTQ/cynd5gEb4yUva5uQo4PxQnwdpwLVZA/u8TeoT8AUNIqfSlh3DxAAAAAElFTkSuQmCC');
+  transform: rotate(180deg);
+}
+
