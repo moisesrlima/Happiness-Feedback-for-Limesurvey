@@ -1,7 +1,7 @@
 /* --------------------------------------------------------
 Javascript para Limesurvey - Happyness Feedback Widget 
 Limesurvey: https://limesurvey.org
-versão: 2.2
+versão: 2.3
 modificado pela última vez: 29/07/2019 por Moisés Rabelo de Lima
 autor: Moisés Rabelo de Lima
 email: moisesrlima@gmail.com

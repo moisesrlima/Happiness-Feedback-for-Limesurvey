@@ -1,7 +1,7 @@
 /* --------------------------------------------------------
 Folha de estilo para Limesurvey - Happyness Feedback Widget 
 Limesurvey: https://limesurvey.org
-versão: 2.2
+versão: 2.3
 modificado pela última vez: 29/07/2019 por Moisés Rabelo de Lima
 autor: Moisés Rabelo de Lima
 email: moisesrlima@gmail.com
@@ -88,7 +88,7 @@ website: https://www.behance.net/moisesrlima
   margin-bottom: -117px;
   max-height: 100vh;
   border-radius: 5px;
-  box-shadow: 0 5px 35px 9px #ccc;
+  box-shadow: 0 5px 35px 9px #0000004d;
   transition: all 0.5s ease;
   min-width: 300px;
   z-index: 9999;
@@ -119,6 +119,7 @@ website: https://www.behance.net/moisesrlima
   vertical-align: middle;
   text-indent: 0;
   cursor: pointer;
+  box-shadow: 0px 2px 2px #00000047;
 }
 
 #happiness-feedback .chat-box-header {
