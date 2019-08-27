@@ -306,7 +306,20 @@ website: https://www.behance.net/moisesrlima
   text-align: center;
 }
 
-
+#happiness-feedback.teal-theme #chat-square i{
+  width: 22px;
+  height: 23px;
+  background-size: 100%;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAZCAYAAAA14t7uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHESURBVHgBtZS/a8JAFMcvwcGh0AwdHLPZMZN06OAWoRU6dOgiKnQ3zh106JDZf6CDm3QURGjp6KhLphSvQ6EBRSspUlC4vtNGzjOnnj8+8Dh9X/K9d++4p6ANEEIMWAwm9QHRURTlG8kCZhpECWJIxLxBZGVMCxsMeTCEvsm0RHYDk3nLDmoaMFypHBI35DC0eWNMDocVmCZ5xXGc50QicZ3JZO5Go5HLavR/oGGMG0RUNfx44hXbti9BikBEW63WA6tVq9X7QCuXy0lB1QY1bvNZ+hHTphwnJxlNFxhbKlp+VQG/aD90FR2HU3U6nf7wWTiKhvbA931PnUwmnyFaidmggCTp9/uO6nneS4hmgekQVozC72Atrut21MFg8CrQtf+QAqrtmKb5PjPo9Xptsj25wISEPK5arbbQUbFYTEGv/S2NMUSWzOcLZoVut9vgTxltNpuPZE/gVV6FtSdWr9dticpXgDbERL2P5fP5W8meL0DzGSKEzgmjUqlYdHqNx+Mv3oBOuLA8a6Ks2YBeAj2aBmPyLB6Pn9Ak9NGDhb7WCGx+kU6nTV3XUzMzAEkyG5OImXrM5ud0NtP7QUeAbrh0cX9MOf5itNLDkgAAAABJRU5ErkJggg==');
+}
+#happiness-feedback.teal-theme #chat-square {
+  background: #37A6AD;
+  color: #ffffff;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03);
+}
+#happiness-feedback.teal-theme .chat-box-toggle {
+  background: #37A6AD;
+}
 @keyframes slide-left {
   0% {
     opacity: 0;
